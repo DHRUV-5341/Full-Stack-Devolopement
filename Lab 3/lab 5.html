@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 5: CSS Transitions & Animations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* 1. Button with hover transition */
+    .transition-button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .transition-button:hover {
+      background-color: #2ecc71; /* Smooth background change */
+    }
+
+    /* 2. Rotating element using keyframes */
+    .rotating-box {
+      margin: 40px auto;
+      width: 100px;
+      height: 100px;
+      background-color: #e74c3c;
+      border-radius: 10px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Lab 5: Transitions & Animations</h2>
+
+  <!-- 1. Button with transition effect -->
+  <button class="transition-button">Hover Me</button>
+
+  <!-- 2. Rotating box with infinite animation -->
+  <div class="rotating-box"></div>
+
+</body>
+</html>

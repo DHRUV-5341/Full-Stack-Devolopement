@@ -1,0 +1,5 @@
+/* External CSS for all paragraph elements */
+p {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}

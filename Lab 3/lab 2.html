@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 2: CSS Box Model & Layout</title>
+  <style>
+    /* General styles for the boxes */
+    .box {
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      padding: 20px;
+      border: 5px solid #333;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      color: white;
+    }
+
+    /* Different background colors */
+    .box1 {
+      background-color: #e74c3c;
+      border-radius: 10px;
+      padding: 10px;
+      box-sizing: border-box; /* content + padding + border stay within the width/height */
+    }
+
+    .box2 {
+      background-color: #3498db;
+      border-radius: 0; /* Square corners */
+      padding-left: 100px;
+      box-sizing: content-box; /* width/height only applies to content */
+    }
+
+    .box3 {
+      background-color: #2ecc71;
+      border-radius: 20px;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    /* For demonstrating block layout */
+    .block-box {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      background-color: hotpink;
+      border: 3px dotted purple;
+      padding: 15px;
+      box-sizing: border-box;
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Three Adjacent Boxes (inline-block)</h2>
+
+  <!-- 1. Three adjacent divs -->
+  <div class="box box1">Box 1<br><small>border-box</small></div>
+  <div class="box box2">Box 2<br><small>content-box</small></div>
+  <div class="box box3">Box 3<br><small>border-box</small></div>
+
+  <!-- 3. Block-level layout -->
+  <h2>Block Layout Example</h2>
+  <div class="block-box">I am a block-level element</div>
+  <div class="block-box">I also take full width like a block</div>
+
+</body>
+</html>

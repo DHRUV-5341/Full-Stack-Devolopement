@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 1: CSS Selectors & Basic Styling</title>
+  <style>
+    /* 2. Element selector to color all <p> tags */
+    p {
+      color: darkgoldenrod;
+    }
+
+    /* 3. Class selector to style specific <li> items */
+    .highlight {
+      color: white;
+      background-color: teal;
+      padding: 5px;
+    }
+
+    /* 4. Attribute selector for <a> with href containing "http" */
+    a[href*="http"] {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* 5. Pseudo-class :hover and pseudo-element ::first-letter */
+    a:hover {
+      color: orange;
+      font-weight: bold;
+    }
+
+    p::first-letter {
+      font-size: 200%;
+      color: navy;
+    }
+
+    /* 6. :nth-child(even) to style every even <li> */
+    ul li:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    /* 7. ::before pseudo-element to add symbol before heading */
+    h2::before {
+      content: "★ ";
+      color: gold;
+      font-size: 1.2em;
+    }
+
+    /* Styling the div with id */
+    #info-box {
+      border: 2px solid gray;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Headings and paragraph elements -->
+  <h1>Welcome to CSS Lab</h1>
+  <h2>CSS Styling Examples</h2>
+  <p>This is the first paragraph to demonstrate element selector and pseudo-elements.</p>
+  <p>This paragraph is styled the same way using the element selector.</p>
+
+  <!-- 3. Unordered list with class-based styling -->
+  <ul>
+    <li class="highlight">High Lighted and Styled Item 1</li>
+    <li>Normal Item 2</li>
+    <li class="highlight">HighLighted Item 3</li>
+    <li>Normal Item 4</li>
+    <li>Normal Item 5</li>
+  </ul>
+
+  <!-- 4. Anchor links to demonstrate attribute selector -->
+  <a href="http://github.com/DHRUV-5341">External Link</a><br>
+  <a href="http://zty.pe">Internal Link</a>
+
+  <!-- 1. A div with a unique id -->
+  <div id="info-box">
+    <p>This is an info box with styled content.</p>
+  </div>
+
+</body>
+</html>

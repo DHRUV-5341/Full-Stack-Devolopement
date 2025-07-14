@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 3: Positioning & Float</title>
+  <style>
+    /* 3. Sticky header using fixed positioning */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 200px; /* Offset for fixed header */
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. Float image left of paragraph */
+    .float-example {
+      margin: 20px;
+      overflow: auto; /* Clear floats */
+      background-color: #f9f9f9;    
+    }
+
+    .float-example img {
+      float: left;
+      margin-right: 15px;
+      width: 150px;
+      height: auto;
+      border: 3px solid #ccc;
+    }
+
+    /* 2. Two-column layout */
+    .container {
+      position: relative;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #f4f4f4;
+      border-right: 2px solid #ccc;
+      padding: 15px;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+
+    .spacer {
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 3. Sticky Header -->
+  <header>
+    <h1>Sticky Header Example</h1>
+  </header>
+
+  <!-- 1. Float image and text -->
+  <section class="float-example">
+    <img src="Sun BReathing.png" alt="Sample Image">
+    <p>
+      This is a paragraph with a floated image to the left. The image stays to the side while the text flows around it. This layout is useful for articles or profile pages where a picture is shown next to text.
+    </p>
+  </section>
+
+  <!-- 2. Two-column layout with absolute sidebar -->
+  <div class="container">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is a fixed-width sidebar using absolute positioning.</p>
+    </div>
+    <div class="content">
+      <h2>Main Content Area</h2>
+      <p>This area adjusts its margin to sit beside the sidebar. You can add as much text here as needed. It’s a fluid layout.</p>
+      <div class="spacer"></div>
+      <p>Scroll to see how the fixed header stays in place.</p>
+    </div>
+  </div>
+
+</body>
+</html>
